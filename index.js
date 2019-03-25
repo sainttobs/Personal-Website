@@ -16,11 +16,6 @@ app.set('view engine', '.hbs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(function(req, res, next){
-	res.locals.login = req.isAuthenticated();
-	res.locals.session = req.session;
-	next();
-})
 
 app.use('/', indexRouter);
 
