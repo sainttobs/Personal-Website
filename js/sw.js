@@ -1,5 +1,5 @@
-var dataCacheName = 'hostelier-v1';
-var cacheName = 'hostelier-final-1'; 
+var dataCacheName = 'Adeyefa Oluwatoba';
+var cacheName = 'Adeyefa Oluwatoba'; 
 
 var filesToCache = [
   '/',
