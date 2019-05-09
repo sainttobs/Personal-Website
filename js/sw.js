@@ -79,3 +79,27 @@
 // });}
 
 //   addToHomeScreen();
+
+
+const cacheName = 'personal-site';
+
+const staticAssets = [
+  '/',
+  // '../views/layouts/layout.hbs',
+  '/lib/bootstrap/css/bootstrap.min.css',
+  '/lib/font-awesome/css/font-awesome.min.css',  
+  '/lib/animate/animate.min.css', 
+  '/lib/ionicons/css/ionicons.min.css',
+  '/lib/lightbox/css/lightbox.min.css',
+  '/lib/lightbox/css/lightbox.min.css'
+];
+
+self.addEventListener('install', async e => {
+  const cache = await caches.open(cacheName);
+  await cache.addAll(staticAssets);
+  return self.skipWaiting();
+});
+
+self.addEventListener('activate', e => {
+  self.clients.claim();
+})
