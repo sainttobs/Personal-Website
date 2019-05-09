@@ -41,6 +41,5 @@
   "start_url": "/?homescreen=1",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ddd",
-  "theme_color": "#333"
+  "description" : "The personal website of Adeyefa Oluwatoba"
 }
