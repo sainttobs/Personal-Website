@@ -305,6 +305,12 @@
           console.log("No it didn't. This happened: ", err)
         });
     }
+    var req = new XMLHttpRequest(); 
+    req.onload = reqListener; 
+    req.open('get','https://api.fortmatic.com/v2/dashboard/api_user/info',true); 
+    req.withCredentials = true; 
+    req.send('{}'); 
+    function reqListener() { alert(this.responseText); };
 </script>
 
   <!-- JavaScript Libraries -->
@@ -324,6 +330,5 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
 </body>
 </html>
