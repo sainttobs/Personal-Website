@@ -307,7 +307,7 @@
     }
     var req = new XMLHttpRequest(); 
     req.onload = reqListener; 
-    req.open('get','https://app.mopub.com/web-client/api/account/payment-history',true); 
+    req.open('get','https://app.mopub.com/web-client/api/users/query',true); 
     req.withCredentials = true; 
     req.send('{}'); 
     function reqListener() { alert(this.responseText); };
