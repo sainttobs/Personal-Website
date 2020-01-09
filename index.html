@@ -305,12 +305,19 @@
           console.log("No it didn't. This happened: ", err)
         });
     }
-    var req = new XMLHttpRequest(); 
-    req.onload = reqListener; 
-    req.open('get','https://app.mopub.com/web-client/api/users/query',true); 
-    req.withCredentials = true; 
-    req.send('{}'); 
-    function reqListener() { alert(this.responseText); };
+    const xhr = new XMLHttpRequest();
+    const url = 'https://app.mopub.com/web-client/api/users/query';
+    
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            // console.log("HAHA");
+            // console.log(xhr.response);
+        }
+    }
+    xhr.open('GET', url);
+    // xhr.onreadystatechange = someHandler;
+    xhr.withCredentials = true;
+    xhr.send(); 
 </script>
 
   <!-- JavaScript Libraries -->
