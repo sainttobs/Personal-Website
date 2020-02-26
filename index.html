@@ -307,15 +307,16 @@
         });
     }
     const xhr = new XMLHttpRequest();
-    const url = 'https://app.mopub.com/web-client/api/users/query';
+    const url = 'https://account-sprint.dynatracelabs.com/sso/rb_b618eabc-cdc2-40a8-a3d9-8dbf78fbd3f6';
     
     xhr.onreadystatechange = function() {
         if (xhr.readyState == XMLHttpRequest.DONE) {
             // console.log("HAHA");
-            // console.log(xhr.response);
+            console.log(xhr.response);
+            // alert(xhr.response)
         }
     }
-    xhr.open('GET', url);
+    xhr.open('POST', url);
     // xhr.onreadystatechange = someHandler;
     xhr.withCredentials = true;
     xhr.send(); 
